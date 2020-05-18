@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  Details.swift
 //  iMovies
 //
 //  Created by Ibram on 5/18/20.
@@ -8,13 +8,18 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class Details: UIViewController {
 
+    @IBOutlet weak var movieImage: UIImageView!
+    @IBOutlet weak var movieTitle: UILabel!
+    @IBOutlet weak var movieDate: UILabel!
+    @IBOutlet weak var movieOverview: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
+    
 
 
 }
-
