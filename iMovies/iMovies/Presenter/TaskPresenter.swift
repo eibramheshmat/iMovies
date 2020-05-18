@@ -16,14 +16,14 @@ class TaskPresenter{
         self.taskView = taskView
     }
     
-    func getData(){
-        taskService.getData(callback:{
+    func getData(page: Int){
+        taskService.getData(page: page, callback:{[weak self]
             data in
             if let data = data{
-                self.taskView.successGetData(Data: data)
+                self?.taskView.successGetData(Data: data)
             }
             else{
-                self.taskView.faildGetData()
+                self?.taskView.faildGetData()
             }
         })
     }

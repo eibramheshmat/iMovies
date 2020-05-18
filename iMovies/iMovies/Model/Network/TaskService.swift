@@ -8,8 +8,8 @@
 
 import Foundation
 class TaskService{
-    func getData(callback: @escaping(Model?)->()){
-        Network.shared.makeHttpRequest(model: Model(), method: .get, APIName: "", parameters: ["api_key":"\(Constants.app_key)","page":"1"]) { (result) in
+    func getData(page: Int, callback: @escaping(Model?)->()){
+        Network.shared.makeHttpRequest(model: Model(), method: .get, APIName: "", parameters: ["api_key":"\(Constants.app_key)","page":"\(page)"]) { (result) in
             switch result {
             case .success(let response):
                 print(response)

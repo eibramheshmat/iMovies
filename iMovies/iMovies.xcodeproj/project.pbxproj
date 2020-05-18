@@ -16,7 +16,6 @@
 		047ADDFC2472E3FC0073FF7D /* TaskService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047ADDF42472E3FC0073FF7D /* TaskService.swift */; };
 		047ADDFD2472E3FC0073FF7D /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047ADDF52472E3FC0073FF7D /* Network.swift */; };
 		047ADE0B2472E78C0073FF7D /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047ADE092472E78C0073FF7D /* HomeTableViewCell.swift */; };
-		047ADE0C2472E78C0073FF7D /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047ADE0A2472E78C0073FF7D /* HomeTableViewCell.xib */; };
 		047ADE0E2472EC500073FF7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 047ADE0D2472EC500073FF7D /* Assets.xcassets */; };
 		047ADE102472F0300073FF7D /* Details.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047ADE0F2472F0300073FF7D /* Details.swift */; };
 		047ADE122472F0450073FF7D /* AddMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047ADE112472F0450073FF7D /* AddMovie.swift */; };
@@ -49,7 +48,6 @@
 		047ADDF42472E3FC0073FF7D /* TaskService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskService.swift; sourceTree = "<group>"; };
 		047ADDF52472E3FC0073FF7D /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		047ADE092472E78C0073FF7D /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
-		047ADE0A2472E78C0073FF7D /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		047ADE0D2472EC500073FF7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		047ADE0F2472F0300073FF7D /* Details.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Details.swift; sourceTree = "<group>"; };
 		047ADE112472F0450073FF7D /* AddMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMovie.swift; sourceTree = "<group>"; };
@@ -124,7 +122,6 @@
 			isa = PBXGroup;
 			children = (
 				047ADE092472E78C0073FF7D /* HomeTableViewCell.swift */,
-				047ADE0A2472E78C0073FF7D /* HomeTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -308,7 +305,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				047FCEC12472E23900A615A3 /* LaunchScreen.storyboard in Resources */,
-				047ADE0C2472E78C0073FF7D /* HomeTableViewCell.xib in Resources */,
 				047ADE0E2472EC500073FF7D /* Assets.xcassets in Resources */,
 				047FCEB92472E23800A615A3 /* Main.storyboard in Resources */,
 			);
