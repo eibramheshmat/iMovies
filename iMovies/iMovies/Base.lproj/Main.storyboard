@@ -18,6 +18,22 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VGX-65-axU">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="TVj-vJ-PC7">
+                                    <rect key="frame" x="0.0" y="77" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="P3v-Rb-ppc">
+                                            <rect key="frame" x="197" y="12" width="20" height="20"/>
+                                        </activityIndicatorView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <constraints>
+                                        <constraint firstItem="P3v-Rb-ppc" firstAttribute="height" secondItem="TVj-vJ-PC7" secondAttribute="height" multiplier="0.454545" id="3GU-2J-DHt"/>
+                                        <constraint firstItem="P3v-Rb-ppc" firstAttribute="width" secondItem="TVj-vJ-PC7" secondAttribute="width" multiplier="0.0483092" id="BY6-rP-YiB"/>
+                                        <constraint firstItem="P3v-Rb-ppc" firstAttribute="centerX" secondItem="TVj-vJ-PC7" secondAttribute="centerX" id="YHW-2N-iWF"/>
+                                        <constraint firstItem="P3v-Rb-ppc" firstAttribute="centerY" secondItem="TVj-vJ-PC7" secondAttribute="centerY" id="nXG-NC-hBm"/>
+                                    </constraints>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeTableViewCell" id="QK3-o5-cbz" customClass="HomeTableViewCell" customModule="iMovies" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="21"/>
@@ -70,6 +86,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="MoviesTableView" destination="VGX-65-axU" id="Fps-fc-XlL"/>
+                        <outlet property="spinner" destination="P3v-Rb-ppc" id="iZx-3I-kdd"/>
+                        <outlet property="tableViewFooter" destination="TVj-vJ-PC7" id="bIm-op-cwg"/>
                         <segue destination="0G0-ob-zE2" kind="show" identifier="getDetails" id="u1u-T3-AHw"/>
                     </connections>
                 </viewController>

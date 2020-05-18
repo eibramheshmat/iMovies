@@ -15,10 +15,13 @@ class ViewController: UIViewController {
     let taskPresenter = TaskPresenter()
     var dataFromApi = Model()
     var dataFromCoreData = [Movies]()
+    var arrAPIData = [resultsData]()
     var page = 1
     var tableCounter = 20
 
     @IBOutlet weak var MoviesTableView: UITableView!
+    @IBOutlet weak var tableViewFooter: UIView!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     override func viewDidLoad() {
         super.viewDidLoad()
         taskPresenter.attachView(taskView: self)
@@ -50,8 +53,13 @@ class ViewController: UIViewController {
 extension ViewController: TaskViewDelegate{
     func successGetData(Data: Model) {
         self.dataFromApi = Data
+        let dataCounter = Data.results.count - 1
+        for index in 0...dataCounter{
+            arrAPIData.append(Data.results[index])
+        }
         DispatchQueue.main.async {
             self.MoviesTableView.reloadData()
+            self.spinner.stopAnimating()
         }
     }
     
@@ -72,7 +80,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
         if section == 0 {
             return dataFromCoreData.count
         }else if section == 1 {
-            return dataFromApi.results.count
+            return arrAPIData.count
         }else{
             return 0
         }
@@ -109,7 +117,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
         }else if indexPath.section == 1{
             if dataFromApi.results.count > 0{
                 let cell = MoviesTableView.dequeueReusableCell(withIdentifier: "HomeTableViewCell", for: indexPath) as! HomeTableViewCell
-                cell.movieName.text = dataFromApi.results[indexPath.row].title
+//                cell.movieName.text = dataFromApi.results[indexPath.row].title
+                cell.movieName.text = arrAPIData[indexPath.row].title
                 return cell
             }else{
                 let cell = MoviesTableView.dequeueReusableCell(withIdentifier: "HomeTableViewCell", for: indexPath) as! HomeTableViewCell
@@ -134,20 +143,20 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
             viewController.selectedMovie = row
             viewController.data = dataFromApi
             viewController.dataOfCoreData = dataFromCoreData
+            viewController.arrAPIData = arrAPIData
         }
     }
     
-//    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-//        if indexPath.row + 1 == tableCounter {
-//            page += 1
-//            print(page)
-//            print(dataFromApi.page)
-//            if let pageNow = dataFromApi.page {
-//                if pageNow < page{
-//                    tableCounter += 20
-//                    taskPresenter.getData(page: page)
-//                }
-//            }
-//        }
-//    }
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row + 1 == tableCounter {
+            page += 1
+            if let pageNow = dataFromApi.page {
+                if pageNow < page{
+                    tableCounter += 20
+                    spinner.startAnimating()
+                    taskPresenter.getData(page: page)
+                }
+            }
+        }
+    }
 }

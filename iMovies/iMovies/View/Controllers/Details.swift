@@ -15,6 +15,7 @@ class Details: UIViewController {
     var selectedMovie: Int?
     var data: Model?
     var dataOfCoreData : [Movies]?
+    var arrAPIData = [resultsData]()
     
 
     @IBOutlet weak var movieImage: UIImageView!
@@ -30,9 +31,9 @@ class Details: UIViewController {
             movieOverview.text = dataOfCoreData?[selectedMovie ?? 0].overview
             loadImage(section: selectSection ?? 0)
         }else if selectSection == 1 {
-            movieTitle.text = data?.results[selectedMovie ?? 0].title
-            movieDate.text = "Released : " + (data?.results[selectedMovie ?? 0].release_date ?? "")
-            movieOverview.text = data?.results[selectedMovie ?? 0].overview
+            movieTitle.text = arrAPIData[selectedMovie ?? 0].title
+            movieDate.text = "Released : " + (arrAPIData[selectedMovie ?? 0].release_date ?? "")
+            movieOverview.text = arrAPIData[selectedMovie ?? 0].overview
             loadImage(section: selectSection ?? 1)
         }
         
@@ -49,7 +50,7 @@ class Details: UIViewController {
                 }
             }
         }else if section == 1{
-            let fullURL = Constants.basImageUrl + (data?.results[selectedMovie ?? 0].poster_path ?? "")
+            let fullURL = Constants.basImageUrl + (arrAPIData[selectedMovie ?? 0].poster_path ?? "")
             let url = URL(string: fullURL)!
             let imageData = try? Data(contentsOf: url)
             if let imgData = imageData{
