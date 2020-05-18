@@ -12,7 +12,7 @@ class TaskService{
         Network.shared.makeHttpRequest(model: Model(), method: .get, APIName: "", parameters: ["api_key":"\(Constants.app_key)","page":"\(page)"]) { (result) in
             switch result {
             case .success(let response):
-                print(response)
+//                print(response)
                 callback(response)
             case .failure(let error):
                 print(error)
