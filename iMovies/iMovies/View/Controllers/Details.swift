@@ -52,11 +52,7 @@ class Details: UIViewController {
             }
         }else if section == 1{/// else if i come from all movies section
             let fullURL = Constants.basImageUrl + (arrAPIData[selectedMovie ?? 0].poster_path ?? "")
-            let url = URL(string: fullURL)!
-            let imageData = try? Data(contentsOf: url)
-            if let imgData = imageData{
-                movieImage.image = UIImage(data: imgData)
-            }
+            movieImage.load(url: URL(string: fullURL)!)
         }
         
     }
