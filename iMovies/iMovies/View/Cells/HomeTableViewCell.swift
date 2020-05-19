@@ -2,7 +2,7 @@
 //  HomeTableViewCell.swift
 //  iMovies
 //
-//  Created by Ibram on 5/18/20.
+//  Created by Ibram on 5/19/20.
 //  Copyright © 2020 Ibram. All rights reserved.
 //
 
@@ -10,7 +10,9 @@ import UIKit
 
 class HomeTableViewCell: UITableViewCell {
 
+    // outlets
     @IBOutlet weak var movieName: UILabel!
+    @IBOutlet weak var moreLbl: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

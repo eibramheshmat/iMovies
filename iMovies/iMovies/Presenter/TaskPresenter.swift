@@ -8,16 +8,18 @@
 
 import Foundation
 class TaskPresenter{
-    var taskService = TaskService()
+    
+    // instances and variables
+    lazy var taskService = TaskService()
     var taskView: TaskViewDelegate!
-    var Data = Model()
+    lazy var Data = Model()
     
     func attachView(taskView: TaskViewDelegate){
         self.taskView = taskView
     }
     
     func getData(page: Int){
-        taskService.getData(page: page, callback:{[weak self]
+        taskService.getData(page: page, callback:{[weak self] /// capture list for solve retain cycle
             data in
             if let data = data{
                 self?.taskView.successGetData(Data: data)

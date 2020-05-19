@@ -5,7 +5,7 @@
 //  Created by Mina Mounir on 7/29/19.
 //  Copyright © 2019 Mariam. All rights reserved.
 //
-// helper to make loading indicator
+/// helper to make loading indicator
 import UIKit
 
 class Loading {

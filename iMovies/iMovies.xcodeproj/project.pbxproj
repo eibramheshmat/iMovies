@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041E3B7424745AA700528247 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041E3B7224745AA700528247 /* HomeTableViewCell.swift */; };
+		041E3B7524745AA700528247 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041E3B7324745AA700528247 /* HomeTableViewCell.xib */; };
 		047ADDF62472E3FC0073FF7D /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047ADDEE2472E3FC0073FF7D /* LoadingView.swift */; };
 		047ADDF72472E3FC0073FF7D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047ADDEF2472E3FC0073FF7D /* Model.swift */; };
 		047ADDF82472E3FC0073FF7D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047ADDF02472E3FC0073FF7D /* Extensions.swift */; };
@@ -15,7 +17,6 @@
 		047ADDFB2472E3FC0073FF7D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047ADDF32472E3FC0073FF7D /* Constants.swift */; };
 		047ADDFC2472E3FC0073FF7D /* TaskService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047ADDF42472E3FC0073FF7D /* TaskService.swift */; };
 		047ADDFD2472E3FC0073FF7D /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047ADDF52472E3FC0073FF7D /* Network.swift */; };
-		047ADE0B2472E78C0073FF7D /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047ADE092472E78C0073FF7D /* HomeTableViewCell.swift */; };
 		047ADE0E2472EC500073FF7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 047ADE0D2472EC500073FF7D /* Assets.xcassets */; };
 		047ADE102472F0300073FF7D /* Details.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047ADE0F2472F0300073FF7D /* Details.swift */; };
 		047ADE122472F0450073FF7D /* AddMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047ADE112472F0450073FF7D /* AddMovie.swift */; };
@@ -39,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		041E3B7224745AA700528247 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		041E3B7324745AA700528247 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		047ADDEE2472E3FC0073FF7D /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		047ADDEF2472E3FC0073FF7D /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		047ADDF02472E3FC0073FF7D /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -47,7 +50,6 @@
 		047ADDF32472E3FC0073FF7D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		047ADDF42472E3FC0073FF7D /* TaskService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskService.swift; sourceTree = "<group>"; };
 		047ADDF52472E3FC0073FF7D /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
-		047ADE092472E78C0073FF7D /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		047ADE0D2472EC500073FF7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		047ADE0F2472F0300073FF7D /* Details.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Details.swift; sourceTree = "<group>"; };
 		047ADE112472F0450073FF7D /* AddMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMovie.swift; sourceTree = "<group>"; };
@@ -82,6 +84,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		041E3B7624746F3E00528247 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				047FCEB72472E23800A615A3 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		047ADDFE2472E4250073FF7D /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +105,7 @@
 		047ADDFF2472E49C0073FF7D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				041E3B7624746F3E00528247 /* Storyboards */,
 				047ADE032472E4F90073FF7D /* Controllers */,
 				047ADE022472E4EF0073FF7D /* Cells */,
 				047ADE012472E4BE0073FF7D /* Delegates */,
@@ -121,7 +132,8 @@
 		047ADE022472E4EF0073FF7D /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				047ADE092472E78C0073FF7D /* HomeTableViewCell.swift */,
+				041E3B7224745AA700528247 /* HomeTableViewCell.swift */,
+				041E3B7324745AA700528247 /* HomeTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -205,7 +217,6 @@
 				047ADDFE2472E4250073FF7D /* Model */,
 				047FCEB12472E23800A615A3 /* AppDelegate.swift */,
 				047FCEB32472E23800A615A3 /* SceneDelegate.swift */,
-				047FCEB72472E23800A615A3 /* Main.storyboard */,
 				047ADE0D2472EC500073FF7D /* Assets.xcassets */,
 				047FCEBF2472E23900A615A3 /* LaunchScreen.storyboard */,
 				047FCEC22472E23900A615A3 /* Info.plist */,
@@ -306,6 +317,7 @@
 			files = (
 				047FCEC12472E23900A615A3 /* LaunchScreen.storyboard in Resources */,
 				047ADE0E2472EC500073FF7D /* Assets.xcassets in Resources */,
+				041E3B7524745AA700528247 /* HomeTableViewCell.xib in Resources */,
 				047FCEB92472E23800A615A3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,11 +338,11 @@
 			files = (
 				047ADDFC2472E3FC0073FF7D /* TaskService.swift in Sources */,
 				047FCEBC2472E23800A615A3 /* iMovies.xcdatamodeld in Sources */,
-				047ADE0B2472E78C0073FF7D /* HomeTableViewCell.swift in Sources */,
 				047ADDFD2472E3FC0073FF7D /* Network.swift in Sources */,
 				047ADE122472F0450073FF7D /* AddMovie.swift in Sources */,
 				047ADDF92472E3FC0073FF7D /* TaskPresenter.swift in Sources */,
 				047FCEB62472E23800A615A3 /* ViewController.swift in Sources */,
+				041E3B7424745AA700528247 /* HomeTableViewCell.swift in Sources */,
 				047ADE102472F0300073FF7D /* Details.swift in Sources */,
 				047FCEB22472E23800A615A3 /* AppDelegate.swift in Sources */,
 				047ADDF72472E3FC0073FF7D /* Model.swift in Sources */,

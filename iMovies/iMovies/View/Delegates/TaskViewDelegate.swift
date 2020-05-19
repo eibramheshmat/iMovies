@@ -8,6 +8,6 @@
 
 import Foundation
 protocol TaskViewDelegate {
-    func successGetData(Data:Model)
-    func faildGetData()
+    func successGetData(Data:Model)///success request and sending data
+    func faildGetData()///failed request
 }
