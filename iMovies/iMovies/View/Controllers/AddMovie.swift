@@ -69,7 +69,6 @@ class AddMovie: UIViewController, UIImagePickerControllerDelegate, UINavigationC
                     do{
                         try managmentContext.save()
                         self.showAlert(title: "Success", message: "Adding done!")
-                        print("saved")
                     }catch let error  as NSError {
                         print("couldn't save .\(error), \(error.userInfo)")
                     }

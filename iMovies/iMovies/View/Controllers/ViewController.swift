@@ -124,11 +124,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
             if dataFromCoreData.count > 0{
                 let cell = MoviesTableView.dequeueReusableCell(withIdentifier: "HomeTableViewCell", for: indexPath) as! HomeTableViewCell
                 cell.movieName.text = dataFromCoreData[indexPath.row].title
-                if indexPath.row == 0 {
-                    cell.moreLbl.text = "details >"
-                }else{
-                    cell.moreLbl.text = ""
-                }
                 return cell
             }else{
                 let cell = MoviesTableView.dequeueReusableCell(withIdentifier: "HomeTableViewCell", for: indexPath) as! HomeTableViewCell
@@ -138,11 +133,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
             if dataFromApi.results.count > 0{
                 let cell = MoviesTableView.dequeueReusableCell(withIdentifier: "HomeTableViewCell", for: indexPath) as! HomeTableViewCell
                 cell.movieName.text = arrAPIData[indexPath.row].title
-                if indexPath.row == 0 {
-                    cell.moreLbl.text = "details >"
-                }else{
-                    cell.moreLbl.text = ""
-                }
                 return cell
             }else{
                 let cell = MoviesTableView.dequeueReusableCell(withIdentifier: "HomeTableViewCell", for: indexPath) as! HomeTableViewCell
